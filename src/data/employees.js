@@ -1,0 +1,268 @@
+const employees = [
+  // ================= Frontend =================
+  {
+    id: 1,
+    name: "John Carter",
+    departmentId: 1,
+    position: "React Developer",
+    status: "Active",
+  },
+  {
+    id: 2,
+    name: "Emma Wilson",
+    departmentId: 1,
+    position: "React Developer",
+    status: "Active",
+  },
+  {
+    id: 3,
+    name: "Michael Brown",
+    departmentId: 1,
+    position: "Vue.js Developer",
+    status: "On Leave",
+  },
+  {
+    id: 4,
+    name: "Sophia Davis",
+    departmentId: 1,
+    position: "Vue.js Developer",
+    status: "Active",
+  },
+  {
+    id: 5,
+    name: "Daniel Miller",
+    departmentId: 1,
+    position: "Angular Developer",
+    status: "Inactive",
+  },
+  {
+    id: 6,
+    name: "Olivia Moore",
+    departmentId: 1,
+    position: "Angular Developer",
+    status: "Active",
+  },
+
+  // ================= Backend =================
+  {
+    id: 7,
+    name: "James Taylor",
+    departmentId: 2,
+    position: "Node.js Developer",
+    status: "Active",
+  },
+  {
+    id: 8,
+    name: "Charlotte Thomas",
+    departmentId: 2,
+    position: "Node.js Developer",
+    status: "Active",
+  },
+  {
+    id: 9,
+    name: "Benjamin Jackson",
+    departmentId: 2,
+    position: "Java Developer",
+    status: "On Leave",
+  },
+  {
+    id: 10,
+    name: "Amelia White",
+    departmentId: 2,
+    position: "Java Developer",
+    status: "Active",
+  },
+  {
+    id: 11,
+    name: "Henry Harris",
+    departmentId: 2,
+    position: ".NET Developer",
+    status: "Active",
+  },
+  {
+    id: 12,
+    name: "Mia Martin",
+    departmentId: 2,
+    position: ".NET Developer",
+    status: "Inactive",
+  },
+
+  // ================= UI/UX =================
+  {
+    id: 13,
+    name: "Ethan Thompson",
+    departmentId: 3,
+    position: "UI Designer",
+    status: "Active",
+  },
+  {
+    id: 14,
+    name: "Grace Garcia",
+    departmentId: 3,
+    position: "UI Designer",
+    status: "Active",
+  },
+  {
+    id: 15,
+    name: "Lucas Martinez",
+    departmentId: 3,
+    position: "UX Designer",
+    status: "On Leave",
+  },
+  {
+    id: 16,
+    name: "Chloe Robinson",
+    departmentId: 3,
+    position: "UX Designer",
+    status: "Active",
+  },
+  {
+    id: 17,
+    name: "Jack Clark",
+    departmentId: 3,
+    position: "Product Designer",
+    status: "Active",
+  },
+  {
+    id: 18,
+    name: "Lily Rodriguez",
+    departmentId: 3,
+    position: "Product Designer",
+    status: "Inactive",
+  },
+
+  // ================= DevOps =================
+  {
+    id: 19,
+    name: "William Lewis",
+    departmentId: 4,
+    position: "DevOps Engineer",
+    status: "Active",
+  },
+  {
+    id: 20,
+    name: "Ella Lee",
+    departmentId: 4,
+    position: "Cloud Engineer",
+    status: "Active",
+  },
+  {
+    id: 21,
+    name: "Alexander Walker",
+    departmentId: 4,
+    position: "Site Reliability Engineer",
+    status: "On Leave",
+  },
+  {
+    id: 22,
+    name: "Avery Hall",
+    departmentId: 4,
+    position: "Cloud Engineer",
+    status: "Active",
+  },
+  {
+    id: 23,
+    name: "Sebastian Allen",
+    departmentId: 4,
+    position: "DevOps Engineer",
+    status: "Inactive",
+  },
+  {
+    id: 24,
+    name: "Scarlett Young",
+    departmentId: 4,
+    position: "Intern",
+    status: "Active",
+  },
+
+  // ================= HR =================
+  {
+    id: 25,
+    name: "Emily King",
+    departmentId: 5,
+    position: "HR Manager",
+    status: "Active",
+  },
+  {
+    id: 26,
+    name: "David Scott",
+    departmentId: 5,
+    position: "HR Specialist",
+    status: "Active",
+  },
+  {
+    id: 27,
+    name: "Abigail Green",
+    departmentId: 5,
+    position: "HR Specialist",
+    status: "On Leave",
+  },
+  {
+    id: 28,
+    name: "Matthew Adams",
+    departmentId: 5,
+    position: "Recruiter",
+    status: "Active",
+  },
+  {
+    id: 29,
+    name: "Hannah Baker",
+    departmentId: 5,
+    position: "Recruiter",
+    status: "Active",
+  },
+  {
+    id: 30,
+    name: "Joseph Nelson",
+    departmentId: 5,
+    position: "HR Assistant",
+    status: "Active",
+  },
+
+  // ================= Sales =================
+  {
+    id: 31,
+    name: "Andrew Hill",
+    departmentId: 6,
+    position: "Sales Manager",
+    status: "Active",
+  },
+  {
+    id: 32,
+    name: "Zoe Campbell",
+    departmentId: 6,
+    position: "Sales Representative",
+    status: "Active",
+  },
+  {
+    id: 33,
+    name: "Samuel Mitchell",
+    departmentId: 6,
+    position: "Sales Representative",
+    status: "On Leave",
+  },
+  {
+    id: 34,
+    name: "Natalie Perez",
+    departmentId: 6,
+    position: "Account Manager",
+    status: "Active",
+  },
+  {
+    id: 35,
+    name: "Logan Roberts",
+    departmentId: 6,
+    position: "Business Development Representative",
+    status: "Active",
+  },
+  {
+    id: 36,
+    name: "Victoria Turner",
+    departmentId: 6,
+    position: "Account Manager",
+    status: "Inactive",
+  },
+];
+
+
+export default employees;
