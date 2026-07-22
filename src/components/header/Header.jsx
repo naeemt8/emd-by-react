@@ -1,4 +1,5 @@
 import { IoClose } from "react-icons/io5";
+import adminImg from "../assets/admin.jpg";
 
 export default function Header({ openAddModal, searchValue, setSearchValue, searchedEmployees, openEditModal }){
     return(
@@ -72,7 +73,7 @@ export default function Header({ openAddModal, searchValue, setSearchValue, sear
 
                         <div className="flex items-center gap-3">
                         <img
-                            src="../images/images.jfif"
+                            src={adminImg}
                             alt="Admin"
                             className="h-10 w-10 rounded-full object-cover"
                         />
