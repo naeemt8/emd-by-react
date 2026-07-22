@@ -1,5 +1,5 @@
 import { IoClose } from "react-icons/io5";
-import adminImg from "../assets/admin.jpg";
+import adminImg from "../../assets/admin.jpg";
 
 export default function Header({ openAddModal, searchValue, setSearchValue, searchedEmployees, openEditModal }){
     return(
