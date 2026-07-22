@@ -41,36 +41,36 @@ export default function Main({ employeesArr, setEmployeesArr }){
         <>
             <main className="mx-auto flex max-w-7xl flex-col gap-8 px-6 py-8">
                 {/* Stats */}
-                <section className="grid gap-6 lg:grid-cols-4">
+                <section >
                     {/* Stats */}
-                    <div className="lg:col-span-4 grid gap-6 md:grid-cols-4">
+                    <div className="grid grid-cols-2 gap-6 md:grid-cols-4">
                         {/* Total Employees */}
                         <div className="rounded-xl border border-gray-200 bg-white p-6 shadow-sm">
-                            <p className="text-sm text-gray-500">Total Employees</p>
-                            <h2 className="mt-2 text-3xl font-bold">{employeesArr.length}</h2>
+                            <p className="text-sm text-gray-500 max-[450px]:text-xs">Total Employees</p>
+                            <h2 className="mt-2 text-3xl font-bold max-[450px]:text-2xl">{employeesArr.length}</h2>
                         </div>
 
                         {/* Active */}
                         <div className="rounded-xl border border-gray-200 bg-white p-6 shadow-sm">
-                            <p className="text-sm text-gray-500">Active Employees</p>
-                            <h2 className="mt-2 text-3xl font-bold text-green-600">{activeEmployees}</h2>
+                            <p className="text-sm text-gray-500 max-[450px]:text-xs">Active Employees</p>
+                            <h2 className="mt-2 text-3xl font-bold text-green-600 max-[450px]:text-2xl">{activeEmployees}</h2>
                         </div>
 
                         {/* On leave */}
                         <div className="rounded-xl border border-gray-200 bg-white p-6 shadow-sm">
-                            <p className="text-sm text-gray-500">On Leave Employees</p>
-                            <h2 className="mt-2 text-3xl font-bold text-yellow-600">{onLeaveEmployees}</h2>
+                            <p className="text-sm text-gray-500 max-[450px]:text-xs">On Leave Employees</p>
+                            <h2 className="mt-2 text-3xl font-bold text-yellow-600 max-[450px]:text-2xl">{onLeaveEmployees}</h2>
                         </div>
                         
                         {/* Inactive */}
                         <div className="rounded-xl border border-gray-200 bg-white p-6 shadow-sm">
-                            <p className="text-sm text-gray-500">Inactive Employees</p>
-                            <h2 className="mt-2 text-3xl font-bold text-red-600">{inActiveEmployees}</h2>
+                            <p className="text-sm text-gray-500 max-[450px]:text-xs">Inactive Employees</p>
+                            <h2 className="mt-2 text-3xl font-bold text-red-600 max-[450px]:text-2xl">{inActiveEmployees}</h2>
                         </div>
                     </div>
                 </section>
 
-                <section className="grid gap-6 md:grid-cols-2">
+                <section className="mx-auto grid w-full gap-6 lg:grid-cols-2 lg:max-w-none max-lg:max-w-[80%] max-md:max-w-[100%]">
                     <DepartmentBox list={frontEndArr} title={'Front-end'}/>
                     <DepartmentBox list={backEndArr} title={'Back-end'} />
                     <DepartmentBox list={uiuxArr} title={'UI/UX'} />

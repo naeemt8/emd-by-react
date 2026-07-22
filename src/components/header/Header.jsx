@@ -22,7 +22,7 @@ export default function Header({ openAddModal, searchValue, setSearchValue, sear
                         className="h-10 w-10 rounded-full object-cover"
                     />
 
-                    <div className="text-right block">
+                    <div className="text-right block max-[350px]:hidden">
                         <p className="text-sm font-semibold text-gray-800">Admin</p>
                         <p className="text-xs text-gray-500">HR Manager</p>
                     </div>
@@ -87,7 +87,7 @@ export default function Header({ openAddModal, searchValue, setSearchValue, sear
                     <div className="order-4 flex w-full md:order-3 md:w-auto">
                     <button
                         onClick={openAddModal}
-                        className="w-full rounded-lg bg-indigo-600 px-4 py-2 text-sm font-medium text-white transition hover:bg-indigo-700 md:w-auto">
+                        className="w-full rounded-lg bg-indigo-600 px-4 py-2 text-sm font-medium text-white transition hover:bg-indigo-700 md:w-auto max-[450px]:text-xs">
                         + Add Employee
                     </button>
                     </div>

@@ -28,10 +28,10 @@ export default function EditModule({ selectedEmployee, setIsEditModalOpen, editH
 
     return(
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm">
-            <div className="w-full max-w-xl rounded-2xl bg-white p-8 shadow-xl">
+            <div className="w-full max-w-xl rounded-2xl bg-white p-8 shadow-xl max-lg:w-[90%]">
 
                 <div className="mb-6 flex items-center justify-between">
-                <h2 className="text-2xl font-bold text-gray-800">
+                <h2 className="text-2xl font-bold text-gray-800 max-[450px]:text-lg">
                     Edit Employee
                 </h2>
 
@@ -57,13 +57,13 @@ export default function EditModule({ selectedEmployee, setIsEditModalOpen, editH
                         placeholder="Full Name"
                         defaultValue={selectedEmployee?.name}
                         required
-                        className="rounded-lg border border-gray-300 px-4 py-2 outline-none focus:border-indigo-500"
+                        className="rounded-lg border border-gray-300 px-4 py-2 outline-none focus:border-indigo-500 max-[450px]:px-2 py-1 text-sm"
                     />
 
                     <select
                         ref={departmentInputRef}
                         defaultValue={selectedEmployee?.department}
-                        className="rounded-lg border border-gray-300 px-4 py-2 outline-none focus:border-indigo-500">
+                        className="rounded-lg border border-gray-300 px-4 py-2 outline-none focus:border-indigo-500 max-[450px]:px-2 py-1 text-sm">
 
                         <option value="front-end">Frontend</option>
                         <option value="back-end">Backend</option>
@@ -79,13 +79,13 @@ export default function EditModule({ selectedEmployee, setIsEditModalOpen, editH
                         placeholder="Position"
                         defaultValue={selectedEmployee?.position}
                         required
-                        className="rounded-lg border border-gray-300 px-4 py-2 outline-none focus:border-indigo-500"
+                        className="rounded-lg border border-gray-300 px-4 py-2 outline-none focus:border-indigo-500 max-[450px]:px-2 py-1 text-sm"
                     />
 
                     <select
                         ref={statusInputRef}
                         defaultValue={selectedEmployee?.status}
-                        className="rounded-lg border border-gray-300 px-4 py-2"
+                        className="rounded-lg border border-gray-300 px-4 py-2 max-[450px]:px-2 py-1 text-sm"
                     >
                         <option value="Active">Active</option>
                         <option value="On Leave">On Leave</option>
@@ -97,14 +97,14 @@ export default function EditModule({ selectedEmployee, setIsEditModalOpen, editH
                         <button
                             type="button"
                             onClick={() => setIsEditModalOpen(false)}
-                            className="rounded-lg border px-5 py-2 hover:bg-gray-100"
+                            className="rounded-lg border px-5 py-2 hover:bg-gray-100 max-[450px]:px-3 py-1 text-sm"
                         >
                             Cancel
                         </button>
 
                         <button 
                             type="submit"
-                            className="rounded-lg bg-indigo-600 px-5 py-2 text-white hover:bg-indigo-700"
+                            className="rounded-lg bg-indigo-600 px-5 py-2 text-white hover:bg-indigo-700 max-[450px]:px-3 py-1 text-sm"
                         >
                             Save Changes
                         </button>

@@ -13,14 +13,14 @@ export default function DepartmentBox({ list, title }){
     return(
         <>
             <div className="rounded-xl border border-gray-200 bg-white shadow-sm">
-                <div className="flex items-start justify-between border-b p-5">
+                <div className="flex items-start justify-between border-b p-5 max-[350px]:p-3">
                     <div>
-                        <h2 className="text-2xl font-bold tracking-tight text-gray-800">{title}</h2>
+                        <h2 className="text-2xl font-bold tracking-tight text-gray-800 max-[450px]:text-lg ">{title}</h2>
 
-                        <p className="mt-1 text-sm text-gray-500">{list.length} Employees</p>
+                        <p className="mt-1 text-sm text-gray-500 max-[450px]:text-xs ">{list.length} Employees</p>
                     </div>
 
-                    <span className="rounded-full border border-indigo-200 bg-indigo-50 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-indigo-600">Department</span>
+                    <span className="rounded-full border border-indigo-200 bg-indigo-50 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-indigo-600 max-[450px]:text-[10px]">Department</span>
                 </div>
 
                 <div className="h-[520px] overflow-y-auto">
@@ -33,8 +33,8 @@ export default function DepartmentBox({ list, title }){
                                 Inactive: "bg-red-100 text-red-700",
                             };
                             return (
-                                <div key={item.id} className="flex items-center justify-between border-b px-5 py-3 hover:bg-gray-50">
-                                    <div className="flex items-center gap-3">
+                                <div key={item.id} className="flex items-center justify-between border-b px-5 py-3 hover:bg-gray-50 max-[450px]:px-2">
+                                    <div className="flex items-center gap-3 max-[450px]:gap-1.5">
                                         <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gray-200">
                                             <svg
                                             xmlns="http://www.w3.org/2000/svg"
@@ -53,20 +53,24 @@ export default function DepartmentBox({ list, title }){
                                         </div>
 
                                         <div>
-                                            <h3 className="font-medium">{item.name}</h3>
-                                            <p className="text-sm text-gray-500">{item.position}</p>
+                                            <h3 className="font-medium max-[450px]:text-sm">{item.name}</h3>
+                                            <p className="text-sm text-gray-500 max-[450px]:text-xs">{item.position}</p>
                                         </div>
                                     </div>
 
-                                    <div className="flex items-center gap-3">
-                                        <span className={`rounded-full px-3 py-1 ${statusClasses[item.status]}`}>{item.status}</span>
+                                    <div className="flex items-center gap-3 max-[450px]:gap-1.5">
+                                        <span className={`rounded-full px-3 py-1 max-[450px]:text-xs max-[350px]:px-2 py-2 ${statusClasses[item.status]}`}>
+                                            <span className="max-[350px]:hidden">
+                                                {item.status}
+                                            </span>
+                                        </span>
 
                                         <button onClick={() => openModal(item)} className="text-blue-600 hover:text-blue-800">
-                                            <Pencil size={18} />
+                                            <Pencil className="h-[18px] w-[18px] max-[450px]:h-[14px] max-[450px]:w-[14px]" />
                                         </button>
 
                                         <button onClick={() => deleteHandler(item.id)} className="text-red-600 hover:text-red-800">
-                                            <Trash2 size={18} />
+                                            <Trash2 className="h-[18px] w-[18px] max-[450px]:h-[14px] max-[450px]:w-[14px]" />
                                         </button>
                                     </div>
                                 </div>
