@@ -1,6 +1,13 @@
 import { Pencil, Trash2 } from "lucide-react";
+import { useContext } from "react";
+import { EditModalContext } from "../../contexts/EditModalContext";
+import { DeleteHandlerContext } from "../../contexts/DeleteHandlerContext";
 
 export default function DepartmentBox({ list, title }){
+
+    const openModal = useContext(EditModalContext);
+
+    const deleteHandler = useContext(DeleteHandlerContext);
 
 
     return(
@@ -8,22 +15,15 @@ export default function DepartmentBox({ list, title }){
             <div className="rounded-xl border border-gray-200 bg-white shadow-sm">
                 <div className="flex items-start justify-between border-b p-5">
                     <div>
-                        <h2 className="text-2xl font-bold tracking-tight text-gray-800">
-                        {title}
-                        </h2>
+                        <h2 className="text-2xl font-bold tracking-tight text-gray-800">{title}</h2>
 
-                        <p className="mt-1 text-sm text-gray-500">
-                        {list.length} Employees
-                        </p>
+                        <p className="mt-1 text-sm text-gray-500">{list.length} Employees</p>
                     </div>
 
-                    <span className="rounded-full border border-indigo-200 bg-indigo-50 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-indigo-600">
-                        Department
-                    </span>
+                    <span className="rounded-full border border-indigo-200 bg-indigo-50 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-indigo-600">Department</span>
                 </div>
 
                 <div className="h-[520px] overflow-y-auto">
-                    {/* Employee Item */}
                     {
                         list.map( (item) => {
 
@@ -61,11 +61,11 @@ export default function DepartmentBox({ list, title }){
                                     <div className="flex items-center gap-3">
                                         <span className={`rounded-full px-3 py-1 ${statusClasses[item.status]}`}>{item.status}</span>
 
-                                        <button className="text-blue-600 hover:text-blue-800">
+                                        <button onClick={() => openModal(item)} className="text-blue-600 hover:text-blue-800">
                                             <Pencil size={18} />
                                         </button>
 
-                                        <button className="text-red-600 hover:text-red-800">
+                                        <button onClick={() => deleteHandler(item.id)} className="text-red-600 hover:text-red-800">
                                             <Trash2 size={18} />
                                         </button>
                                     </div>
@@ -73,8 +73,6 @@ export default function DepartmentBox({ list, title }){
                             )
                         })
                     }
-
-                    {/* بقیه اعضا... */}
                 </div>
             </div>
         </>
